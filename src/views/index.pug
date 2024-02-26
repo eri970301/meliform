@@ -1,0 +1,111 @@
+html 
+    head
+        title Meli Darkside
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='/css/styles.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    body
+        header 
+            h2 Meli Darkside 
+            nav 
+                ul 
+                    li 
+                        a(href="#main_form") Formulario de Cotización
+                    li 
+                        a(href="#main_plan") Planeación del Diseño
+                    li 
+                        a(href="#example") Ejemplos
+        section 
+            div(class='main_video_background')
+                h1 WELCOME TO THE DARKSIDE
+                img(src='/media/logo true.png')
+            video(src='/media/video.mp4' autoplay muted loop class='main_video')
+        main 
+            article(class='title_form', id="main_form")
+                h1 Formulario de Cotización
+                p Agradezco tu interés por tatuarte conmigo, es sumamente importante tener una comunicación clara y completa, para ello solicito que rellenes los campos con la mayor claridad y brevedad posible para darte una pronta respuesta.
+            form(action="datos.php" method='get')
+                div(class='main_form')
+                    div(class='user-box')
+                        input(type="text", name="nombres" required)
+                        label Nombre y apellido: 
+                    div(class='user-box')
+                        input(type="email", name="email" required)
+                        label Usuario de Instagram: 
+                    div(class='user-box')
+                        input(type="number", name="numero" required)
+                        label Número de celular: 
+                    div(class='user-box')
+                        label País
+                        select(name='pais')
+                            option(value="col") Colombia
+                            option(value="ger") Alemania  
+                    div(class='user-box')
+                        label Ciudad
+                        select(name='pais')
+                            option(value="col") Colombia
+                            option(value="ger") Alemania 
+                    div(class='user-box')
+                        textarea(name="descripcion", cols="30", rows="10") 
+                        label Descripción de lo que quieres hacerte:
+                    div(class='user-box')
+                        input(type="text", name="tamaño") 
+                        label Tamaño aproximado en cms: #[em (Especificar área deseada a tatuar)]
+                    div(class='user-box')
+                        input(type="file", name="fotos_area", class="file_input") 
+                        label Fotos del área a tatuar: #[em (Deben ser tomadas estando de pie, donde se visualice completamente como en los ejemplos)]
+                    div(class='user-box-submit')
+                        input(type="submit", name="submit", class="submit_button", value="ENVIAR") 
+            section(class='notes', id="main_plan")
+                h2 #[b Notas:]
+                ul(class='notes_pointer')
+                    li Si el tatuaje que quieres es un cover up (tapar algo) se debe evaluar la solución adecuada, esto toma más tiempo Y presupuesto que un tatuaje normal.
+                    li No se hacen diseños de otros artistas, el diseño se crea a partir del dialogo, nuestras ideas y mi línea grafica.
+                    li No se terminan piezas de otros artistas.
+                    li No se hacen tatuajes a color.
+                    li No se hacen tatuajes de rostros o muy figurativos.
+            section(class='planner')
+                div(class='hoverable_image')
+                    div(class='hov_section')
+                        img(src="/media/DSC00408.jpg", alt="", height='500px')
+                    div(class='hov_section')
+                        h3 #[b Planeación del diseño]
+                        p Si vamos a iniciar un proyecto el día de la cita asignaremos 1 o 2 horas las cuales destinaremos a desarrollar juntos el diseño de tu tatuaje y compartir ideas, ten en cuenta que te entregare un diseño único en mi estilo y estoy destinando tiempo de mi trabajo con los conocimientos y estudios que he llevado acabo para llegar a ello.
+                div(class='hoverable_image')
+                    div(class='hov_section')
+                        p Si vienes de otra ciudad podemos hacer una asesoría virtual o presencial un día antes de tu cita para hablar del diseño y desarrollarlo juntxs, todo esto se coordinara una vez pactada la cita.
+                    div(class='hov_section')
+                        img(src="/media/B021AAEE-9608-423C-980F-7F04BF339BD5.JPG", alt="", height='500px')
+                div(class='hoverable_image')
+                    div(class='hov_section')
+                        img(src="/media/DSC00479.jpg", alt="", height='500px')
+                    div(class='hov_section')
+                        h3 Si decidiste tatuarte conmigo, ten en cuenta que:
+                        p En el precio de tu tatuaje va incluido el diseño y un parche de tela que aportara a la bioseguridad y rápida curación de tu tatuaje.
+                div(class='hoverable_image')
+                    div(class='hov_section')
+                        p Mi propósito a través del arte que hago, es devolver al tatuaje todo lo que me ha brindado y dejarle un legado de amor, una parte de ello la lograre dejándote un tatuaje que perdure y te sientas idetificad@ con él. por eso es importante que para tu cita tengas disponibilidad de tiempo, paciencia, buen umbral de dolor, el mismo respeto al tatuaje y el tiempo destinado a su optimo desarrollo.
+                    div(class='hov_section')
+                        img(src="/media/DSC00579.jpg", alt="", height='500px')
+                div(class='hoverable_image')
+                    div(class='hov_section')
+                        img(src="/media/DSC01009.JPG", alt="", height='500px')
+                    div(class='hov_section')
+                        p Teniendo en cuenta lo anterior queremos recordar que los proyectos de manejan por sesiones, cada una de 4 horas.
+            section(class='planner', id="example")
+                h3 Ejemplo de las fotos del área a tatuar:
+                img(src="/media/body.jpg", alt="", height='auto')
+        footer 
+            div(class='footer')
+                div(class='row')
+                    a(href="https://www.facebook.com/desatino.controlado.5", target="_blank") #[i(class='fa fa-facebook')]
+                    a(href="https://www.instagram.com/melidarkside/", target="_blank") #[i(class='fa fa-instagram')] 
+                div(class='row')
+                    a(href="/") Contáctame
+                    a(href="/") Our Services
+                    a(href="/") Privacy Policy
+                    a(href="/") Terms & Conditions
+                    a(href="/") Career
+                div(class='row')
+                    p EXOZ Copyright © 2023 Inferno - All rights reserved || Designed By: EXOZ
+    script(src="/js/scroll.js") 
