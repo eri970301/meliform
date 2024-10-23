@@ -2,11 +2,11 @@ html
     head
         title Meli Darkside
         meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
         link(rel='stylesheet', href='/css/styles.css')
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     body
         header 
-            h2 Meli Darkside 
             nav 
                 ul 
                     li 
@@ -15,47 +15,101 @@ html
                         a(href="#main_plan") Planeación del Diseño
                     li 
                         a(href="#example") Ejemplos
-        section 
+            img(src="/media/logo-white.png", alt="", srcset="", width='130px')
+            nav 
+                ul 
+                    li 
+                        a(href="#main_form") Formulario de Cotización
+                    li 
+                        a(href="#main_plan") Planeación del Diseño
+                    li 
+                        a(href="#example") Ejemplos
+            div(class="header_hamburguer_container") 
+                button(class='header_hamburger')
+                    img(src="/media/hamburger.png", alt="", srcset="", width='30px')
+        section(class='main_video_section')
             div(class='main_video_background')
                 h1 WELCOME TO THE DARKSIDE
-                img(src='/media/logo true.png')
-            video(src='/media/video.mp4' autoplay muted loop class='main_video')
+                p Hug Your Darkside
+                a(href="/about") Sobre mi
+            video(src='/media/opening.mp4' autoplay muted loop class='main_video')
         main 
+            div(class='opening')
+                h2 "The wisdom teaches us to balance the light and shadow within us, facing the dark side with serenity and self-knowledge"
+            div(class='hov_container')
+                div(class='hoverable_image bio')
+                    div(class='hov_section')
+                        img(src="/media/meli.jpg", alt="", height='500px')
+                    div(class='hov_section')
+                        p My name is Melissa Soto, artistically “Meli Darkside”, I was born in Bogotá, Colombia in 1996. 
+                        p Lover of moments that activate my senses and take me out of “normality”, that is, art, presence. 
+                        p Master in fine arts, Manizales, Colombia (2020) and tattoo artist with approximately 7 years of experience, at the moment i have a private tattoo studio in “el toke” by “don tetto, in the north of Bogotá city.
+                        br
+                        h3 Meli Darkside
+                div(class='carousel')
+                    div(class='carousel_container')
+                        div(class='carousel_content')
+                            img(src="/media/inkin.png", alt="", srcset="" class="carousel-item")
+                            img(src="/media/true_love.png", alt="", srcset="" class="carousel-item")
+                            img(src="/media/warlock.png", alt="", srcset="" class="carousel-item")
+            div(class="gallery_menu")
+                div(class="gallery_container")
+                    div(class="gallery_item")
+                        a(href="http://") 
+                            div(class="gallery_card_preview")
+                                img(src="/media/gallery1.jpeg", alt="", srcset="")
+                    div(class="gallery_item")
+                        a(href="http://") 
+                            div(class="gallery_card_preview")
+                                img(src="/media/gallery2.jpeg", alt="", srcset="")
+                    div(class="gallery_item")
+                        a(href="http://") 
+                            div(class="gallery_card_preview")
+                                img(src="/media/gallery3.jpeg", alt="", srcset="")
             article(class='title_form', id="main_form")
                 h1 Formulario de Cotización
                 p Agradezco tu interés por tatuarte conmigo, es sumamente importante tener una comunicación clara y completa, para ello solicito que rellenes los campos con la mayor claridad y brevedad posible para darte una pronta respuesta.
             form(action="datos.php" method='get')
                 div(class='main_form')
-                    div(class='user-box')
-                        input(type="text", name="nombres" required)
-                        label Nombre y apellido: 
-                    div(class='user-box')
-                        input(type="email", name="email" required)
-                        label Usuario de Instagram: 
-                    div(class='user-box')
-                        input(type="number", name="numero" required)
-                        label Número de celular: 
-                    div(class='user-box')
-                        label País
-                        select(name='pais')
-                            option(value="col") Colombia
-                            option(value="ger") Alemania  
-                    div(class='user-box')
-                        label Ciudad
-                        select(name='pais')
-                            option(value="col") Colombia
-                            option(value="ger") Alemania 
-                    div(class='user-box')
-                        textarea(name="descripcion", cols="30", rows="10") 
-                        label Descripción de lo que quieres hacerte:
-                    div(class='user-box')
-                        input(type="text", name="tamaño") 
-                        label Tamaño aproximado en cms: #[em (Especificar área deseada a tatuar)]
-                    div(class='user-box')
-                        input(type="file", name="fotos_area", class="file_input") 
-                        label Fotos del área a tatuar: #[em (Deben ser tomadas estando de pie, donde se visualice completamente como en los ejemplos)]
-                    div(class='user-box-submit')
-                        input(type="submit", name="submit", class="submit_button", value="ENVIAR") 
+                    div(class='form_input')
+                        div(class='user-box')
+                            input(type="text", name="nombres" required)
+                            label Nombre y apellido: 
+                    div(class='form_input')
+                        div(class='user-box')
+                            input(type="email", name="email" required)
+                            label Usuario de Instagram: 
+                    div(class='form_input')
+                        div(class='user-box')
+                            input(type="number", name="numero" required)
+                            label Número de celular: 
+                    div(class='form_input')
+                        div(class='user-box')
+                            label País
+                            select(name='pais')
+                                option(value="col") Colombia
+                                option(value="ger") Alemania  
+                    div(class='form_input')
+                        div(class='user-box')
+                            label Ciudad
+                            select(name='pais')
+                                option(value="col") Colombia
+                                option(value="ger") Alemania 
+                    div(class='form_input')
+                        div(class='user-box')
+                            textarea(name="descripcion", cols="30", rows="10") 
+                            label Descripción de lo que quieres hacerte:
+                    div(class='form_input')
+                        div(class='user-box')
+                            input(type="text", name="tamaño") 
+                            label Tamaño aproximado en cms: #[em (Especificar área deseada a tatuar)]
+                    div(class='form_input')
+                        div(class='user-box')
+                            label(class="file_input", for="file_upload") Fotos del área a tatuar: #[em (Deben ser tomadas estando de pie, donde se visualice completamente como en los ejemplos)]
+                                input(type="file", name="fotos_area", id="file_upload") 
+                    div(class='form_input')
+                        div(class='user-box-submit')
+                            input(type="submit", name="submit", class="submit_button", value="ENVIAR") 
             section(class='notes', id="main_plan")
                 h2 #[b Notas:]
                 ul(class='notes_pointer')
@@ -97,10 +151,10 @@ html
                 img(src="/media/body.jpg", alt="", height='auto')
         footer 
             div(class='footer')
-                div(class='row')
+                div(class='row socials')
                     a(href="https://www.facebook.com/desatino.controlado.5", target="_blank") #[i(class='fa fa-facebook')]
                     a(href="https://www.instagram.com/melidarkside/", target="_blank") #[i(class='fa fa-instagram')] 
-                div(class='row')
+                div(class='row sitemap')
                     a(href="/") Contáctame
                     a(href="/") Our Services
                     a(href="/") Privacy Policy
